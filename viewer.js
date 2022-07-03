@@ -16,8 +16,6 @@ input.onchange = function () {
     handsontableContainer.innerHTML = ''
     handsontableContainer.className = ''
     document.querySelector('input').remove()
-    document.querySelector('.github-corner').remove()
-    document.querySelector('.place-your-ad-here').remove()
 
     Handsontable(handsontableContainer, {
       data: data.data,
