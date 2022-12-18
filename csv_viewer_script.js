@@ -19,7 +19,6 @@ input.onchange = function () {
     
     handsontableContainer.innerHTML = ''
     handsontableContainer.className = ''
-    document.querySelector('input').remove()
 
     Handsontable(handsontableContainer, {
       data: data.data,
