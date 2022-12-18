@@ -1,5 +1,5 @@
-var input = document.getElementById('input-file')
-var handsontableContainer = document.getElementById('handsontable-container')
+var input = document.getElementById('input-file');
+var handsontableContainer = document.getElementById('handsontable-container');
 
 input.onchange = function () {
   var file = this.files[0]
@@ -13,6 +13,10 @@ input.onchange = function () {
     })
 
     // reset container
+    document.getElementById("content").remove();
+    document.getElementById("body").setAttribute("style", "background-color: #202124;");
+    document.getElementById("csv-div").setAttribute("class","p-5");
+    
     handsontableContainer.innerHTML = ''
     handsontableContainer.className = ''
     document.querySelector('input').remove()
