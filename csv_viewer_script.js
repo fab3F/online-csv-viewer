@@ -14,7 +14,7 @@ input.onchange = function () {
 
     // reset container
     document.getElementById("content").getElementsByTagName("section")[0].remove();
-    document.getElementById("content").setAttribute("class","p-5");
+    document.getElementById("content").setAttribute("class","background p-5");
     
     handsontableContainer.innerHTML = ''
     handsontableContainer.className = ''
