@@ -13,9 +13,9 @@ input.onchange = function () {
     })
 
     // reset container
-    document.getElementById("content").remove();
-    document.getElementById("body").setAttribute("style", "background-color: #202124;");
-    document.getElementById("csv-div").setAttribute("class","p-5");
+    document.getElementById("content").getElementsByTagName("section")[0].remove();
+    //document.getElementById("body").setAttribute("style", "background-color: #202124;");
+    //document.getElementById("csv-div").setAttribute("class","p-5");
     
     handsontableContainer.innerHTML = ''
     handsontableContainer.className = ''
