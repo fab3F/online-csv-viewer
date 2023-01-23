@@ -38,4 +38,4 @@ var spacing = window.setInterval(function(){
         return;
   }
   holder.setAttribute("style", '');
-}, 50);
+}, 10);
