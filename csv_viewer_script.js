@@ -1,6 +1,17 @@
 var input = document.getElementById('input-file');
 var handsontableContainer = document.getElementById('handsontable-container');
 
+function space(){
+  let holder = document.getElementsByClassName("wtHolder")[0];
+  if(holder){
+    holder.removeAttribute("style");
+  }
+}
+
+document.addEventListener("resize", space);
+document.addEventListener("handsontable:render", space);
+
+
 input.onchange = function () {
   var file = this.files[0];
   var reader = new FileReader();
@@ -31,13 +42,3 @@ input.onchange = function () {
 
   file && reader.readAsText(file);
 }
-
-function space(){
-  let holder = document.getElementsByClassName("wtHolder")[0];
-  if(holder){
-    holder.removeAttribute("style");
-  }
-}
-
-document.addEventListener("handsontable:render", space);
-document.addEventListener("resize", space);
