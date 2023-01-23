@@ -2,22 +2,22 @@ var input = document.getElementById('input-file');
 var handsontableContainer = document.getElementById('handsontable-container');
 
 input.onchange = function () {
-  var file = this.files[0]
-  var reader = new FileReader()
+  var file = this.files[0];
+  var reader = new FileReader();
 
   reader.onload = function (e) {
-    var csv = e.target.result
+    var csv = e.target.result;
     var data = Papa.parse(csv, {
       header: true,
       skipEmptyLines: true
-    })
+    });
 
     // reset container
     document.getElementById("content").getElementsByTagName("section")[0].remove();
     document.getElementById("content").setAttribute("class","background p-5");
     
-    handsontableContainer.innerHTML = ''
-    handsontableContainer.className = ''
+    handsontableContainer.innerHTML = '';
+    handsontableContainer.className = '';
 
     Handsontable(handsontableContainer, {
       data: data.data,
@@ -27,7 +27,18 @@ input.onchange = function () {
       width: '100%',
       licenseKey: 'non-commercial-and-evaluation',
     })
+    var spacing_var = window.setInterval(spacing(), 50);
   }
 
   file && reader.readAsText(file)
 }
+
+
+function spacing(){
+  let holder = document.getElementsByClassName("wtHolder")[0];
+  if(typeof holder === 'undefined'){
+        return;
+  }
+  holder.setAttribute("style", '');
+}
+  
