@@ -26,19 +26,16 @@ input.onchange = function () {
       columnSorting: true,
       width: '100%',
       licenseKey: 'non-commercial-and-evaluation',
-    })
-    var spacing_var = window.setInterval(spacing(), 50);
+    });
   }
 
-  file && reader.readAsText(file)
+  file && reader.readAsText(file);
 }
 
-
-function spacing(){
+var spacing = window.setInterval(function(){
   let holder = document.getElementsByClassName("wtHolder")[0];
   if(typeof holder === 'undefined'){
         return;
   }
   holder.setAttribute("style", '');
-}
-  
+}, 50);
