@@ -32,12 +32,12 @@ input.onchange = function () {
   file && reader.readAsText(file);
 }
 
-document.addEventListener("handsontable:render", space);
-document.addEventListener("resize", space);
-
 function space(){
   let holder = document.querySelector(".wtHolder");
   if(holder){
     holder.removeAttribute("style");
   }
 }
+
+document.addEventListener("handsontable:render", space);
+document.addEventListener("resize", space);
