@@ -32,10 +32,12 @@ input.onchange = function () {
   file && reader.readAsText(file);
 }
 
-var spacing = window.setInterval(function(){
-  let holder = document.getElementsByClassName("wtHolder")[0];
-  if(typeof holder === 'undefined'){
-        return;
+document.addEventListener("handsontable:render", space);
+document.addEventListener("resize", space);
+
+function space(){
+  let holder = document.querySelector(".wtHolder");
+  if(holder){
+    holder.removeAttribute("style");
   }
-  holder.setAttribute("style", '');
-}, 10);
+}
