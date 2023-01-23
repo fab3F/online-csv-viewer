@@ -8,8 +8,8 @@ function space(){
   }
 }
 
-document.addEventListener("resize", space);
-document.addEventListener("handsontable:render", space);
+window.addEventListener("resize", space);
+window.addEventListener("handsontable:render", space);
 
 
 input.onchange = function () {
