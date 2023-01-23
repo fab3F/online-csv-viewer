@@ -33,7 +33,7 @@ input.onchange = function () {
 }
 
 function space(){
-  let holder = document.querySelector(".wtHolder");
+  let holder = document.getElementsByClassName("wtHolder")[0];
   if(holder){
     holder.removeAttribute("style");
   }
