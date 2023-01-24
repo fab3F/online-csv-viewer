@@ -1,6 +1,13 @@
 var input = document.getElementById('input-file');
 var handsontableContainer = document.getElementById('handsontable-container');
 
+function space(){
+  let holder = document.getElementsByClassName("wtHolder")[0];
+  if(holder){
+      holder.removeAttribute("style");
+  }
+}
+
 
 input.onchange = function () {
   var file = this.files[0];
@@ -30,5 +37,8 @@ input.onchange = function () {
     });
   }
 
+  space();
   file && reader.readAsText(file);
 }
+
+setInterval(space, 100);
