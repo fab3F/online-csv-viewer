@@ -1,16 +1,6 @@
 var input = document.getElementById('input-file');
 var handsontableContainer = document.getElementById('handsontable-container');
 
-function space(){
-  let holder = document.getElementsByClassName("wtHolder")[0];
-  if(holder){
-    holder.removeAttribute("style");
-  }
-}
-
-window.addEventListener("resize", space);
-window.addEventListener("handsontable:render", space);
-
 
 input.onchange = function () {
   var file = this.files[0];
