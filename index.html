@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="/css/classes.css"type="text/css">
 <link rel="stylesheet" href="/css/styles.css" type="text/css">
 <link rel="stylesheet" href="/css/footer.css" type="text/css">
+<link rel="stylesheet" href="/css/cookies.css" type="text/css">
 
 <!--Footer Social Media Icons Stylesheet-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
@@ -54,19 +55,44 @@
 <!-- Google Search canonical -->
 <link rel="canonical" href="https://fab3F.github.io/online-csv-viewer" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YL9HZNY8V4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YL9HZNY8V4');
-</script>
+<!-- Cookies -->
+<script src="/js/cookies.js" defer></script>
 
 </head>
 
 <body>
+
+  <!-- Cookie Popup -->
+  <div id="cookie-popup">
+    <div id="cookie-content">
+      <h2>Datenschutzeinstellungen</h2>
+      <p>Wir verwenden Cookies und ähnliche Technologien, um sicherzustellen, dass wir Ihnen die bestmögliche Erfahrung auf unserer Website bieten können. Sie können Ihre Einstellungen jederzeit in der Fußzeile ändern. 
+        Weitere Informationen dazu finden Sie hier:</p>
+      <p><a href="/idn">Impressum, Datenschutz & Nutzungsbedingungen</a></p>
+      <div class="cookie-button-container">
+        <button id="cookie-accept-all">Alle Akzeptieren</button>
+        <button id="cookie-reject-all">Alle Ablehnen</button>
+        <button id="cookie-settings">Einstellungen</button>
+      </div>
+    </div>
+    <div id="cookie-settings-content">
+      <h2>Einstellungen</h2>
+      <p>Bitte wählen Sie aus, welche Cookies und ähnliche Technologien auf dieser Website verwendet werden dürfen.</p>
+      <form>
+        <h4>Analyse-Technologien und Cookies:</h4>
+        <input type="checkbox" id="switch_gtm" name="gtm" checked/><label for="switch_gtm" class="switch-label">Toggle_GTM</label>
+        <h5 class="cookie-name">Google Tag Manager</h5>
+        <p>Tool, mit dem Tags und Tracking-Codes einer Website zentral verwaltet und auf der Website eingefügt werden können, um das Nutzerverhalten zu messen und zu analysieren.</p>
+        <input type="checkbox" id="switch_ga" name="ga" checked/><label for="switch_ga" class="switch-label">Toggle_GA</label>
+        <h5 class="cookie-name">Google Analytics</h5>
+        <p>Ein Web-Analyse-Tool zu Analyse des Besucherverhaltens, um Erkenntnisse darüber zu gewinnen, wie Nutzer mit der Website interagieren und wie die Website verbessert werden kann.</p>
+      </form>
+      <div class="cookie-button-container">
+        <button id="cookie-save" onclick="saveCookieSettings()">Auswahl speichern</button>
+        <button id="cookie-back" onclick="showCookiePopup()">Zurück</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Navigation -->
   <nav id="home" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -130,6 +156,7 @@
         <a href="#projects">Projekte</a>
         <a href="#contact">Kontakt</a>
         <a href="/idn">Impressum, Datenschutz & Nutzungsbedingungen</a>
+        <a href="/online-csv-viewer" onclick="showCookiePopup()">Datenschutzeinstellungen</a>
       </p>
       
       <p class="footer-emailtext">E-Mail: 
