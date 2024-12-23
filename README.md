@@ -63,4 +63,4 @@ Auf der Homepage gibt es die ganzen Downloads zu den besagten Projekten.
 
 ## Support oder Kontakt
 
-Du hast ein Problem mit einem unserer Dienste oder möchtest eine Frage loswerden? Dann komm doch gerne auf den [EasyFlick Discord](https://fab3f.github.io/link/discord)! Dort kannst du im extra dafür angelegten _Support-Channel_ nachfragen. Oder du schreibst eine E-Mail an **support@help.info.gf**
+Du hast ein Problem mit einem unserer Dienste oder möchtest eine Frage loswerden? Dann komm doch gerne auf den [EasyFlick Discord](https://fab3f.github.io/link/discord)! Dort kannst du im extra dafür angelegten _Support-Channel_ nachfragen. Oder du schreibst eine E-Mail an **fab3F@programmer.net**
